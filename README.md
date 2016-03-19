@@ -15,8 +15,7 @@ $ sudo apt-get install ros-indigo-joy
 このようにPCと接続し、以下のコマンドを実行する。
 ```bash
 $ ls /dev/input/
-```
-```bash
+
 by-id    event10  event14  event2  event6  js0
 by-path  event11  event15  event3  event7  mice
 event0   event12  event16  event4  event8  mouse0
@@ -27,9 +26,7 @@ event1   event13  event17  event5  event9
 joysticの動作を確認する。
 ```bash
 $ sudo jstest /dev/input/js0
-```
 
-```bash
 Driver version is 2.1.0.
 Joystick (Sony PLAYSTATION(R)3 Controller) has 27 axes (X, Y, Z, Rz, (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null), (null))
 and 19 buttons (Trigger, ThumbBtn, ThumbBtn2, TopBtn, TopBtn2, PinkieBtn, BaseBtn, BaseBtn2, BaseBtn3, BaseBtn4, BaseBtn5, BaseBtn6, BtnDead, BtnA, BtnB, BtnC, (null), (null), (null)).
@@ -43,8 +40,7 @@ Axes:  0:     0  1:     0  2:     0  3:     0  4:     0  5:     0  6:     0  7: 
 まずは、joystickの権限を一覧表示する。
 ```bash
 $ ls -l /dev/input/js0
-```
-```bash
+
 crw-rw-XX- 1 root dialout 188, 0 2009-08-14 12:04 /dev/input/jsX
 ```
 上に似たようなものが表示される。ここで、
@@ -82,8 +78,7 @@ $ rosrun joy joy_node
 joysticのデータを見るために、新しいターミナルを開いてrostopic echoする。
 ```bash
 $ rostopic echo joy
-```
-```bash
+
 ---
 header: 
   seq: 805
