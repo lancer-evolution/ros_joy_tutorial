@@ -47,9 +47,9 @@ crw-rw-XX- 1 root dialout 188, 0 2009-08-14 12:04 /dev/input/jsX
 
 1. XXがrwの場合、jsデバイスは適切に設定されている。
 2. XXが - -の場合、jsデバイスは適切に設定されていない。故に、以下のコマンドを実行する必要がある。
-```bash
-$ sudo chmod a+rw /dev/input/jsX
-```
+  ```bash
+  $ sudo chmod a+rw /dev/input/jsX
+  ```
 
 ######筆者の場合、
 ```bash
